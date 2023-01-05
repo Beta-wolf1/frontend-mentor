@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+ :root{
+    font-size: 1em;
+    box-sizing: border-box;
+ }
+
+ *,*::after, *::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+ }
+ 
+body {
+    font-family: Inter;
+    padding: 30px;
+ }
+
+ #cover {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: hsl(233, 8%, 79%);
+    opacity: .4;
+ }
+ header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding-bottom: 2em;
+    align-items: center;
+ }
+
+ header nav {
+    justify-self: end;
+ }
+
+ nav div img {
+    display: none;
+ }
+
+ nav ul {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    gap: 2em;
+ }
+ nav ul li:hover{
+   color: hsl(35, 77%, 62%);
+   cursor: pointer;
+}
+
+ main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+ }
+
+ .web img {
+    width: 100%;
+    object-fit: cover;
+ }
+
+ .web {
+    grid-column: span 2;
+ }
+ 
+ .new {
+    grid-column: span 1;
+    background-color: hsl(240, 100%, 5%);
+    color: hsl(36, 100%, 99%);
+ }
+
+.new h2 {
+    margin: 1em;
+    color: hsl(35, 77%, 62%);
+}
+
+.new article {
+    margin: 1em;
+    padding: 1em 0;
+}
+
+.new article h3:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+.new p {
+    margin: 1em 0;
+    font-size: .8em;
+    color: hsl(233, 8%, 79%);
+}
+.new .border {
+    border-top: 1px solid hsl(236, 13%, 42%);
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+
+.retro {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+}
+
+ .retro-article {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+    margin-top: 1em;
+ }
+
+ .retro-article img {
+    width: 100px;
+ }
+
+ .web {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ }
+ .web img {
+    grid-column: span 2;
+    height: 100%;
+ }
+
+ .web h1 {
+    font-size: 2.5em;
+    line-height: 1em;
+    margin: .7em 0;
+ }
+
+ .web div {
+    margin: 1.8em .2em;
+ }
+
+ .web div p:first-child {
+    font-size: .8rem;
+    line-height: 1.4em;
+    color: hsl(233, 8%, 79%);
+ }
+
+ .web div p:last-child {
+    padding: .6em;
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    width: 150px;
+    margin-top: 1.2em;
+    text-align: center;
+    letter-spacing: 3px;
+ }
+
+ .web div p:last-child:hover {
+    background-color: hsl(240, 100%, 5%);
+    cursor: pointer;
+ }
+
+ .retro-article h3,  .retro-article p{
+    color: hsl(233, 8%, 79%);
+}
+
+.retro-article p {
+    font-size: .7em;
+    margin-top: .8em;
+}
+
+.retro-article h4 {
+    margin-top: .8em;
+    font-size: .9em;
+    font-weight: 800;
+}
+.retro-article h4:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+@media screen and (max-width: 760px) {
+   main, .web, .retro {
+      display: block;
+   }
+   nav div {
+      display: none;
+      position: fixed;
+      background-color: white;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 30%;
+   }
+   nav > img {
+      cursor: pointer;
+   }
+   nav ul {
+      display: grid;
+      gap: 2em;
+      margin-top: 4em;
+      margin-left: 2em;
+   }
+   nav div img {
+      margin: 2em 0 0 80%;
+      display: block;
+      cursor: pointer;
+   }
+
+}
+
+@media screen and (min-width:760.1px) {
+   nav > img {
+      display: none;
+   }
+}
