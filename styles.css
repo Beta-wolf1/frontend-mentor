@@ -70,7 +70,7 @@ div{
     margin-right: .5em;
 }
 
-span{
+.lone {
     color:hsl(228,12%,48%);
     text-decoration: line-through;
     display: inline-block;
@@ -95,7 +95,20 @@ button:hover{
     background-color:hsl(158,36%,25%) ;
 
 }
-
+footer {
+    margin-top: 2em;
+    font-size: smaller;
+    font-weight: 800;
+    font-family:Fraunces;
+    text-align: center;
+}
+footer a {
+    color: hsl(158,36%,25%);
+}
+.wolf {
+    text-decoration: none;
+    color: hsl(158,36%,25%);
+}
 @media screen and (min-width:750px){
     body > div{
         display: grid;
