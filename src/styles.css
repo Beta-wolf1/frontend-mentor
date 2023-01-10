@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Space+Grotesk:wght@500&display=swap');
+:root {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    min-height: 100vh;
+}
+
+.first {
+    background-image: url("../images/bg-main-desktop.png");
+}
+.second {
+    /* background-color: yellow; */
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+/* form styling */
+form {
+    /* background-color: blue; */
+    height: 45%;
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: .3em;
+    color: hsl(278, 68%, 11%);
+}
+
+.span-2 {
+    grid-column: span 2;
+    font-size: 1em;
+}
+
+.block {
+    display: block;
+    width: 100%;
+    padding: .7em;
+    margin-top: .6em;
+    border-radius: .5em;
+    outline: none;
+    border: 1px solid hsl(270, 3%, 87%);
+}
+
+form div input{
+    width: 38%;
+    padding: .7em;
+    margin-top: .6em;
+    border-radius: .5em;
+    outline: none;
+}
+
+button {
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(270, 3%, 87%);
+    border: none;
+    border-radius: .5em;
+}

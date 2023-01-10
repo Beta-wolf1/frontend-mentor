@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+  <main>
+    <section class="first">
+      <div class="card top"> 
+        <div class="card-header">
+          <div class="white round big circle"></div>
+          <div class="round small circle"></div>
+        </div>
+        <div class="card-footer">
+          <h4>0000 0000 0000 0000</h4>
+          <p>JANE APPLESEED</p>
+          <p>00/00</p>
+        </div>
+      </div>
+
+      <div class="card bottom">
+        <p>000</p>
+      </div>
+    </section>
+    <section class="second">
+        <form>
+          <label for="name" class="span-2">CARDHOLDER NAME
+            <input type="text" class="block" id="name" placeholder="e.g. Jane Appleseed" class="0ne">
+          </label>
+          <label for="number" class="span-2">CARD NUMBER
+            <input type="number" class="block" name="number" id="number" placeholder="e.g. 1234 5678 9123 0000" class="two">
+          </label>
+          <div>
+            <p for="date">EXP. DATE (MM//YY)</p>
+            <input type="number" name="date" id="month" placeholder="MM">
+            <input type="number" name="date" id="year" placeholder="YY">
+          </div>
+          <label for="cvc" >CVC
+            <input type="number" class="block" placeholder="e.g. 123" name="cvc" id="cvc">
+          </label>
+          <button type="submit" class="span-2">Confirm</button>
+      </form>
+    </section>
+  </main>
+    <!-- <div class="attribution"> -->
+     <!-- Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.  -->
+  <!-- </div> -->
+</body>
+</html>
