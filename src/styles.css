@@ -3,7 +3,6 @@
     font-size: 1em;
     box-sizing: border-box;
 }
-
 *,*::before,*::after {
     box-sizing: inherit;
     margin: 0;
@@ -12,14 +11,151 @@
 main {
     display: grid;
     grid-template-columns: 2fr 3fr;
+    font-family: 'Space Grotesk';
 }
-
 .first {
     background-image: url(../images/bg-main-desktop.png);
     background-repeat: no-repeat;
     height: 100vh;
 }
+.second {
+    margin: 25% 25% 0;
+}
+ [id="month"], [id="year"] {
+    width: 15%;
+    padding: .6em;
+    text-align: center;
+    border: 0.1px solid  hsl(270, 3%, 87%);
+    border-radius:.4em;
+}
+[id="name"], [id="number"] {
+    width: 70%;
+    padding:.6em;
+    border: 1px solid  hsl(270, 3%, 87%);
+    border-radius:.4em;
+}
+[id="cvc"] {
+    width: 38%;
+    padding: .6em;
+    border: 1px solid  hsl(270, 3%, 87%);
+    border-radius:.4em;
+    margin-left: .5em;
+}
+[type="submit"] {
+    width: 70%;
+    padding: .8em;
+    background-color:  #21092f;
+    color: hsl(0, 0%, 100%);
+    border: 1px solid  hsl(270, 3%, 87%);
+    border-radius: .4em;
+    border-style: none;
+}
+strong {
+    font-size:.6em;
+    letter-spacing: .2em;
+    display: inline-block;
+    padding-bottom: .5em;
+    font-weight: 600;
+}
+  .focus {
+    color:hsl(270, 3%, 87%); 
+    font-weight: 500;
+    opacity: 0.3;
+    outline: none;
+ }
 
-form {
-    
+ .focus:focus {
+    color:hsl(278, 68%, 11%) ;
+    opacity: 1;
+    border: 1px solid purple;
+ }
+/* for the cards */
+.top {
+    position:absolute;
+    top: 20%;
+    left: 15%;
+    background-image: url(../images/bg-card-front.png);
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 30%;
+    border-radius: .5em;
+}
+.bottom {
+    position: relative;
+    background-image: url(../images/bg-card-back.png);
+    background-repeat: no-repeat;
+    width: 70%;
+    height: 30%;
+    top: 53%;
+    left:55%;
+    border-radius:.5em;
+}
+.bottom p {
+    position: absolute;
+    right: 5%;
+    bottom: 38%;
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+    font-size: .6em;
+    letter-spacing: .2em;
+}
+.card-header{
+    width: 15%;
+    height: 50%;
+    margin-left: 1em;
+    margin-top:1em;
+}
+.big.circle {
+    background-color:hsl(270, 3%, 87%);
+    width: 35px; /*35%*/
+    height: 36px; /*20%*/
+    border-radius: 1em;
+    border: 1px solid hsl(270, 3%, 87%);
+}
+.small.circle {
+    position:absolute;
+    top: 12%;
+    left:16%;
+    width: 15px; /*2%*/
+    height: 14px; /*4%*/
+    border-radius: .3em;
+    border:1px solid hsl(270, 3%, 87%);
+}
+.card-footer h4 {
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    word-spacing: .3em;
+    letter-spacing:.3em;
+    font-weight: 500;
+}
+h4+p {
+    margin: 2em;
+    margin-bottom:0;
+    margin-top: 3.5em;
+    font-weight: 500;
+    font-size: .6em;
+    letter-spacing: .2em;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+}
+.last-p {
+    color: hsl(0, 0%, 100%);
+    font-size:.6em;
+    display: inline-block;
+    margin-left: 20em;
+}
+.error {
+    color: red;
+    font-size: .6em;
+    display: none;
+}
+.cvc-error {
+    display: inline-block;
+    width: 30%;
+    color: red;
+    font-size: .6em;
+    display: none;
+}
+.err-two {
+    padding-left: 15px;
 }
