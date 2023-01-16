@@ -39,20 +39,20 @@
     <section class="second">
         <form>
           <label for="name" class="span-2"> <strong>CARDHOLDER NAME</strong><br>
-            <input type="text" class="focus" id="name" placeholder="e.g. Jane Appleseed" class="focus"><br>
+            <input type="text" class="focus" id="name" placeholder="e.g. Jane Appleseed" class="focus" required><br>
             <span class="error">Please input a valid name</span><br><br>
           </label>
           <label for="number" class="span-2"><strong>CARD NUMBER</strong> <br>
-            <input type="number" class="focus" name="number" id="number" placeholder="e.g. 1234 5678 9123 0000" class="focus"><br>
+            <input type="number" class="focus" name="number" id="number" placeholder="e.g. 1234 5678 9123 0000" class="focus" required><br>
             <span class="error">Wrong format, Numbers only</span><br><br>
           </label>
           <div class="form-container">
             <p for="date"><strong>EXP. DATE (MM//YY) <span>CVC</span></strong> </p>
-            <input type="number" name="date" id="month" placeholder="MM" class="focus">
-            <input type="number" name="date" id="year" placeholder="YY" class="focus">
+            <input type="number" name="date" id="month" placeholder="MM" class="focus" required>
+            <input type="number" name="date" id="year" placeholder="YY" class="focus" required>
 
             <label for="cvc" >
-              <input type="number" class="focus" placeholder="e.g. 123" name="cvc" id="cvc"><br>
+              <input type="number" class="focus" placeholder="e.g. 123" name="cvc" id="cvc" required><br>
               <span class="cvc-error">Can't be blank</span>
               <span class="cvc-error err-two">Can't be blank</span>
             </label><br><br>
