@@ -21,7 +21,7 @@ main {
 .second {
     margin: 25% 25% 0;
 }
- [id="month"], [id="year"] {
+[id="month"], [id="year"] {
     width: 15%;
     padding: .6em;
     text-align: center;
@@ -57,18 +57,18 @@ strong {
     padding-bottom: .5em;
     font-weight: 600;
 }
-  .focus {
-    color:hsl(270, 3%, 87%); 
-    font-weight: 500;
-    opacity: 0.3;
-    outline: none;
- }
+.focus {
+color:hsl(270, 3%, 87%); 
+font-weight: 500;
+opacity: 0.3;
+outline: none;
+}
 
- .focus:focus {
-    color:hsl(278, 68%, 11%) ;
-    opacity: 1;
-    border: 1px solid purple;
- }
+.focus:focus {
+color:hsl(278, 68%, 11%) ;
+opacity: 1;
+border: 1px solid purple;
+}
 /* for the cards */
 .top {
     position:absolute;
