@@ -18,56 +18,13 @@ main {
     height: 100vh;
 }
 .second {
-    background-color: black;
-}
-[id="month"], [id="year"] {
-    width: 15%;
-    padding: .6em;
-    text-align: center;
-    border: 0.1px solid  hsl(270, 3%, 87%);
-    border-radius:.4em;
-}
-[id="name"], [id="number"] {
-    width: 70%;
-    padding:.6em;
-    border: 1px solid  hsl(270, 3%, 87%);
-    border-radius:.4em;
-}
-[id="cvc"] {
-    width: 38%;
-    padding: .6em;
-    border: 1px solid  hsl(270, 3%, 87%);
-    border-radius:.4em;
-    margin-left: .5em;
-}
-[type="submit"] {
-    width: 70%;
-    padding: .8em;
-    background-color:  #21092f;
-    color: hsl(0, 0%, 100%);
-    border: 1px solid  hsl(270, 3%, 87%);
-    border-radius: .4em;
-    border-style: none;
-}
-strong {
-    font-size:.6em;
-    letter-spacing: .2em;
-    display: inline-block;
-    padding-bottom: .5em;
-    font-weight: 600;
-}
-.focus {
-    color:hsl(270, 3%, 87%); 
-    font-weight: 500;
-    opacity: 0.3;
-    outline: none;
+    background-color: hsl(0, 0%, 100%);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding-left: 4em;
 }
 
-.focus:focus {
-color:hsl(278, 68%, 11%) ;
-opacity: 1;
-border: 1px solid purple;
-}
 /* for the cards */
 
 /* ------------Card-top------------ */
@@ -173,4 +130,66 @@ border: 1px solid purple;
 }
 .err-two {
     padding-left: 15px;
+}
+
+/* Styling the Form */
+
+form {
+    width: 50%;
+}
+
+[id="month"],
+[id="year"] {
+    width: 15%;
+    padding: .6em;
+    text-align: center;
+    border: 0.1px solid hsl(270, 3%, 87%);
+    border-radius: .4em;
+}
+
+[id="name"],
+[id="number"] {
+    width: 70%;
+    padding: .6em;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: .4em;
+}
+
+[id="cvc"] {
+    width: 38%;
+    padding: .6em;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: .4em;
+    margin-left: .5em;
+}
+
+[type="submit"] {
+    width: 70%;
+    padding: .8em;
+    background-color: #21092f;
+    color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: .4em;
+    border-style: none;
+}
+
+strong {
+    font-size: .6em;
+    letter-spacing: .2em;
+    display: inline-block;
+    padding-bottom: .5em;
+    font-weight: 600;
+}
+
+.focus {
+    color: hsl(270, 3%, 87%);
+    font-weight: 500;
+    opacity: 0.3;
+    outline: none;
+}
+
+.focus:focus {
+    color: hsl(278, 68%, 11%);
+    opacity: 1;
+    border: 1px solid purple;
 }
