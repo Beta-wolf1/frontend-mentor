@@ -14,12 +14,11 @@ main {
     font-family: 'Space Grotesk';
 }
 .first {
-    background-image: url(../images/bg-main-desktop.png);
-    background-repeat: no-repeat;
+    background: url(../images/bg-main-desktop.png) no-repeat;
     height: 100vh;
 }
 .second {
-    margin: 25% 25% 0;
+    background-color: black;
 }
 [id="month"], [id="year"] {
     width: 15%;
@@ -58,10 +57,10 @@ strong {
     font-weight: 600;
 }
 .focus {
-color:hsl(270, 3%, 87%); 
-font-weight: 500;
-opacity: 0.3;
-outline: none;
+    color:hsl(270, 3%, 87%); 
+    font-weight: 500;
+    opacity: 0.3;
+    outline: none;
 }
 
 .focus:focus {
@@ -70,30 +69,12 @@ opacity: 1;
 border: 1px solid purple;
 }
 /* for the cards */
-.bottom {
-    position: relative;
-    background-image: url(../images/bg-card-back.png);
-    background-repeat: no-repeat;
-    width: 22.5em;
-    height: 12em;
-    top: 53%;
-    left:55%;
-    border-radius:.5em;
-}
-.bottom p {
-    position: absolute;
-    right: 5%;
-    bottom: 38%;
-    color: hsl(0, 0%, 100%);
-    font-weight: 500;
-    font-size: .6em;
-    letter-spacing: .2em;
-}
+
 /* ------------Card-top------------ */
 .top {
     position: absolute;
     top: 20%;
-    left: 15%;
+    left: 25%;
     background-image: url(../images/bg-card-front.png);
     background-repeat: no-repeat;
     width: 22.5em;
@@ -152,8 +133,30 @@ border: 1px solid purple;
     text-align: end;
     padding-right: 4em;
 }
-
 /*-------------end of card-top--------------*/
+
+/* -------card-bottom---------- */
+.bottom {
+    position: absolute;
+    background-image: url(../images/bg-card-back.png);
+    background-repeat: no-repeat;
+    width: 22.5em;
+    height: 12em;
+    top: 25%;
+    left: 55%;
+    border-radius: .5em;
+}
+
+.bottom p {
+    position: relative;
+    right: 5%;
+    bottom: 38%;
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+    font-size: .6em;
+    letter-spacing: .2em;
+}
+/* ----------end of card-bottom----------- */
 .error {
     color: red;
     font-size: .6em;
