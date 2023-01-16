@@ -10,7 +10,7 @@
 }
 main {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 3fr;
     font-family: 'Space Grotesk';
 }
 .first {
@@ -74,7 +74,7 @@ border: 1px solid purple;
 .top {
     position: absolute;
     top: 20%;
-    left: 25%;
+    left: 10%;
     background-image: url(../images/bg-card-front.png);
     background-repeat: no-repeat;
     width: 22.5em;
@@ -138,22 +138,24 @@ border: 1px solid purple;
 /* -------card-bottom---------- */
 .bottom {
     position: absolute;
-    background-image: url(../images/bg-card-back.png);
-    background-repeat: no-repeat;
     width: 22.5em;
     height: 12em;
-    top: 25%;
-    left: 55%;
+    bottom: 15%;
+    left: 14%;
     border-radius: .5em;
 }
-
-.bottom p {
+.bottom img {
     position: relative;
-    right: 5%;
-    bottom: 38%;
+    width: 100%;
+    height: 100%;
+}
+.bottom p {
+    position: absolute;
+    top: 46%;
+    right: 20%;
     color: hsl(0, 0%, 100%);
     font-weight: 500;
-    font-size: .6em;
+    font-size: .8rem;
     letter-spacing: .2em;
 }
 /* ----------end of card-bottom----------- */
