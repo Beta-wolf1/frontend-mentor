@@ -6,7 +6,7 @@
 *,*::before,*::after {
     box-sizing: inherit;
     margin: 0;
-    padding: o;
+    padding: 0;
 }
 main {
     display: grid;
@@ -70,22 +70,12 @@ opacity: 1;
 border: 1px solid purple;
 }
 /* for the cards */
-.top {
-    position:absolute;
-    top: 20%;
-    left: 15%;
-    background-image: url(../images/bg-card-front.png);
-    background-repeat: no-repeat;
-    width: 30%;
-    height: 30%;
-    border-radius: .5em;
-}
 .bottom {
     position: relative;
     background-image: url(../images/bg-card-back.png);
     background-repeat: no-repeat;
-    width: 70%;
-    height: 30%;
+    width: 22.5em;
+    height: 12em;
     top: 53%;
     left:55%;
     border-radius:.5em;
@@ -99,51 +89,71 @@ border: 1px solid purple;
     font-size: .6em;
     letter-spacing: .2em;
 }
+/* ------------Card-top------------ */
+.top {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    background-image: url(../images/bg-card-front.png);
+    background-repeat: no-repeat;
+    width: 22.5em;
+    height: 12em;
+    border-radius: .5em;
+}
+/* ----------card-header----------- */
 .card-header{
     width: 15%;
-    height: 50%;
+    height: 45%;
     margin-left: 1em;
     margin-top:1em;
 }
-.big.circle {
-    background-color:hsl(270, 3%, 87%);
-    width: 35px; /*35%*/
-    height: 36px; /*20%*/
-    border-radius: 1em;
-    border: 1px solid hsl(270, 3%, 87%);
+.card-header {
+    width: 100%;
 }
-.small.circle {
-    position:absolute;
-    top: 12%;
-    left:16%;
-    width: 15px; /*2%*/
-    height: 14px; /*4%*/
-    border-radius: .3em;
-    border:1px solid hsl(270, 3%, 87%);
+.big {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 1em;
+    display: inline-block;
+}
+.small {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 1em;
+    border: .1px solid white;
+    margin-bottom: .4em;
+    margin-left: .5em;
+}
+/* --------------card-footer------------------- */
+.card-footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 .card-footer h4 {
-    text-align: center;
-    color: hsl(0, 0%, 100%);
-    word-spacing: .3em;
-    letter-spacing:.3em;
-    font-weight: 500;
+    grid-column: span 2;
+    padding-left: 1em;
+    margin-bottom: 1em;
+    font-size: 1.3rem;
+    color: white;
+    letter-spacing: 3px;
+    font-weight: 400;
 }
-h4+p {
-    margin: 2em;
-    margin-bottom:0;
-    margin-top: 3.5em;
-    font-weight: 500;
-    font-size: .6em;
-    letter-spacing: .2em;
-    color: hsl(0, 0%, 100%);
-    display: inline-block;
+.card-footer p {
+    font-size: .6rem;
+    color: white;
+    letter-spacing: 1px;
 }
-.last-p {
-    color: hsl(0, 0%, 100%);
-    font-size:.6em;
-    display: inline-block;
-    margin-left: 20em;
+.card-footer p:nth-child(2) {
+    padding-left: 2em;
 }
+.card-footer p:nth-child(3) {
+    text-align: end;
+    padding-right: 4em;
+}
+
+/*-------------end of card-top--------------*/
 .error {
     color: red;
     font-size: .6em;
