@@ -1,6 +1,16 @@
-const inputs = Array.from(document.querySelectorAll("input")), buttonEl = document.querySelector("button"), cardNumber = document.querySelector(".card-footer h4"), cardName = document.querySelector("#card-name"), cardExp = document.querySelector(".last-p"), cvc = document.querySelector(".bottom p"), cvcError = Array.from(document.querySelectorAll(".cvc-error")), inputError = Array.from(document.querySelectorAll(".error"));
-let regex = /^\d{16}$/g, regex2 = /^[a-z\s]+$/gi, regex3 = /^\d{3}$/, regex4 = /^\d{2}$/;
-console.log(cvcError, inputError);
+const inputs = Array.from(document.querySelectorAll("input"));
+const buttonEl = document.querySelector("button"); 
+const cardNumber = document.querySelector(".card-footer h4"); 
+const cardName = document.querySelector("#card-name"); 
+const cardExp = document.querySelector(".last-p"); 
+const cvc = document.querySelector(".bottom p"); 
+const cvcError = Array.from(document.querySelectorAll(".cvc-error")); 
+const inputError = Array.from(document.querySelectorAll(".error"));
+let regex = /^\d{16}$/g;
+let regex2 = /^[a-z\s]+$/gi; 
+let regex3 = /^\d{3}$/;
+let regex4 = /^\d{2}$/;
+
 inputs.forEach((e) => {
     e.addEventListener("keyup", () => {
         if(e.id === "number") {
@@ -50,9 +60,6 @@ inputs.forEach((e) => {
 
 buttonEl.addEventListener("click", (e) => {
     e.preventDefault();
-    let number = inputs[1].value;
-    // number = String(number).split("");
-    // console.log(number)
     cardNumber.textContent = spaceNum(inputs[1].value);
     cardName.textContent = inputs[0].value;
     cardExp.textContent = `${inputs[2].value}/${inputs[3].value}`;
