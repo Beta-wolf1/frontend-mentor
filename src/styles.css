@@ -216,25 +216,27 @@ strong {
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 780px) {
     main {
         display: block;
     }
     .first {
         height: 40vh;
+        background-size: cover;
     }
     .second {
-        margin-top: 7em;
+        margin-top: 9em;
     }
     /* --------- Positioning the cards ---------- */
     .bottom {
         top: 7vh;
-        left: 17vw;
+        left: 15vw;
         z-index: 0;
     }
     .top {
         z-index: 1;
         top: 25vh;
+        box-shadow: 4px 6px 100px 1px rgba(0,0,0,.3);
     }
     /* ----------positioning ends here------------ */
 
@@ -269,5 +271,12 @@ strong {
         padding: 1.3em;
         font-weight: 700;
         letter-spacing: 1px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .top, .bottom {
+        width: 100%;
+        left: 0;
     }
 }
