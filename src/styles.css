@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Inter:wght@400;700;800&family=Montserrat&family=Moon+Dance&family=Poppins:wght@700&display=swap');
 
 :root{
     font-size: .8125em;
@@ -126,4 +127,41 @@ main {
     .patrick {
         grid-column: span 3;
     }
+}
+
+/* --------Attribution--------- */
+div.attribution {
+    width: 30%;
+    margin: auto;
+    padding: .1em;
+    border: 2px solid black;
+    margin-bottom: .5em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-family: 'Poppins';
+    font-size: .8rem;
+    border-radius: 3px;
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, .5);
+}
+
+div.attribution a {
+    text-decoration: none;
+}
+
+.attribution a:first-child {
+    background-color: black;
+    color: white;
+    padding: .3em;
+}
+
+.attribution a:nth-child(2) {
+    background-color: white;
+    color: black;
+    padding: .3em;
+}
+
+.attribution a:nth-child(3) {
+    background-color: black;
+    color: white;
+    padding: .3em;
 }
