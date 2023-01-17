@@ -1,15 +1,21 @@
-const inputs = Array.from(document.querySelectorAll("input"));
-const buttonEl = document.querySelector("button"); 
-const cardNumber = document.querySelector(".card-footer h4"); 
-const cardName = document.querySelector("#card-name"); 
-const cardExp = document.querySelector(".last-p"); 
-const cvc = document.querySelector(".bottom p"); 
-const cvcError = Array.from(document.querySelectorAll(".cvc-error")); 
-const inputError = Array.from(document.querySelectorAll(".error"));
-let regex = /^\d{16}$/g;
-let regex2 = /^[a-z\s]+$/gi; 
-let regex3 = /^\d{3}$/;
-let regex4 = /^\d{2}$/;
+const [inputs, buttonEl, cardNumber, cardName, cardExp, cvc, cvcError, inputError] = [
+    Array.from(document.querySelectorAll("input")), 
+    document.querySelector("button"), 
+    document.querySelector(".card-footer h4"), 
+    document.querySelector("#card-name"), 
+    document.querySelector(".last-p"), 
+    document.querySelector(".bottom p"), 
+    Array.from(document.querySelectorAll(".cvc-error")), 
+    Array.from(document.querySelectorAll(".error"))
+]
+
+const [regex, regex2, regex3, regex4] = [
+    /^(\d{4}\s){3}\d{4}$/g,
+    /^[a-z\s]+$/gi,
+    /^\d{3}$/,
+    /^\d{2}$/
+]
+
 
 inputs.forEach((e) => {
     e.addEventListener("keyup", () => {
@@ -67,10 +73,10 @@ buttonEl.addEventListener("click", (e) => {
 })
 
 function spaceNum(n) {
-    let num = "", x = String(n), y = String(n);
+    let num = "", x = String(n).replace(/\s/g, ""), y = String(n).replace(/\s/g, "");
     while(num.length < y.length) {
         num += x.slice(0,4) + " ";
         x = x.slice(4,)
-    } 
+    }
     return num;
 }
