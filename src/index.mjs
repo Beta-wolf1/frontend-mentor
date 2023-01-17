@@ -1,3 +1,5 @@
+import { spaceNum } from "./spacenum.mjs";
+
 const [inputs, buttonEl, cardNumber, cardName, cardExp, cvc, cvcError, inputError] = [
     Array.from(document.querySelectorAll("input")), 
     document.querySelector("button"), 
@@ -16,10 +18,12 @@ const [regex, regex2, regex3, regex4] = [
     /^\d{2}$/
 ]
 
+let old = null;
 
 inputs.forEach((e) => {
     e.addEventListener("keyup", () => {
         if(e.id === "number") {
+            old = spaceNum(e.value);
             if(regex.test(e.value)) {
                 inputError[1].style.display = "none";
                 e.style.border = "1px solid  hsl(270, 3%, 87%)"
@@ -28,6 +32,8 @@ inputs.forEach((e) => {
             } else {
                 e.style.border = "1px solid red"
                 inputError[1].style.display = "inline";
+                e.value = old;
+                console.log(old)
             };
         } else if(e.id === "name") {
             if(regex2.test(e.value)) {
@@ -70,13 +76,4 @@ buttonEl.addEventListener("click", (e) => {
     cardName.textContent = inputs[0].value;
     cardExp.textContent = `${inputs[2].value}/${inputs[3].value}`;
     cvc.textContent = inputs[4].value;
-})
-
-function spaceNum(n) {
-    let num = "", x = String(n).replace(/\s/g, ""), y = String(n).replace(/\s/g, "");
-    while(num.length < y.length) {
-        num += x.slice(0,4) + " ";
-        x = x.slice(4,)
-    }
-    return num;
-}
+});
