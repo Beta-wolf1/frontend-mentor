@@ -135,6 +135,7 @@ main {
 form {
     width: 50%;
     margin-right: 7em;
+    align-self: end;
     justify-self: end;
 }
 
