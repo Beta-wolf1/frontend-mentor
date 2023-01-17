@@ -79,6 +79,9 @@ main {
 .jeanette .review-full, .kira .review-full {
     color: hsl(217, 19%, 35%);
 }
+.kira .review-full {
+    line-height: 1.9em!important;
+}
 .patrick {
     background-color: hsl(219, 29%, 14%);
 }
@@ -121,6 +124,7 @@ main {
         grid-column: 6 / span 2 ;
         grid-row: 1 / span 2;
     }
+
     .jeanette {
         grid-column: span 2;
     }
